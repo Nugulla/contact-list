@@ -9,26 +9,64 @@ Publica tu código en Github, en tu repositorio contact-list crea un branch llam
 
 const ListaConctactos= ["Ana Fuentes", "Jael Martinez", "Sandra Caballero"]
 
-const agregarContacto=(contacto)=>{
+const conctactos =[
+        {
+          id: 1,
+          nombres: "Ana",
+          apellidos: "Zschocher",
+          teléfono: 9999999999, 
+          ubicaciones: {
+              ciudad: "La Ceiba",
+              dirección: "La Ceiba", 
+          },
+            
+        },
+        {
+          id: 1,
+          nombres: "Ana",
+          apellidos: "Zschocher",
+          teléfono: 9999999999, 
+          ubicaciones: {
+              ciudad: "La Ceiba",
+              dirección: "La Ceiba", 
+          },
+            
+        },
+
+];
+
+const agregarContacto=(id, nombres, apellidos, teléfono, ciudad, dirección)=>{
+     const objectContact = {
+          id:id,
+          nombres:nombres,
+          apellidos:apellidos,
+          teléfono:teléfono,
+          ciudad:ciudad,
+          dirección:dirección,
+     }
      /* agregar 
-    // ListaConctactos.push(contacto)
-     /*Agregar contacto*/
-     ListaConctactos.splice(2,0,contacto)
+    
+     Agregar contacto
+    /* ListaConctactos.splice(1,0,objectContact)*/
+     conctactos.push(objectContact)
+  
 }
 
 /*Funcion Agregar contactos */
-const eliminarContacto=(contacto)=>{
+
+const eliminarContacto=(contactos)=>{
      /*Recorriendo el arreglo */
-let indice = ListaConctactos.findIndex(item => item== contacto)
+let indice = conctactos.findIndex(item => item== contactos)
 console.log(indice);
-ListaConctactos.splice(indice, 1)
+conctactos.splice(indice, 1)
 
 }
 
 const imprimir = ()=>{
-
+console.log("Lista de Contactos");
      console.log("__________________");
-   for (const item of ListaConctactos) {
+   for (const item of conctactos) {
+    
      console.log(item);
      
    }
@@ -36,10 +74,9 @@ const imprimir = ()=>{
 
 /* Mostrar conctactos*/
 
-imprimir()
+console.log(conctactos);
 /* LLamar funcion agregarcontactos */
-agregarContacto("Jassiel Gutierrez")
-imprimir()
-eliminarContacto("Sandra Caballero")
-imprimir()
+ agregarContacto(12345, "Amanda", "Martinez", 99999, "La Ceiba", "lejos")
+ console.log(conctactos);
+
 
