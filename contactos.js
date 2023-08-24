@@ -38,7 +38,7 @@ const imprimir = ()=>{
 
 imprimir()
 /* LLamar funcion agregarcontactos */
-agregarContacto("Jassiel Gutierrez")
+agregarContacto("Jassiel Fuentes")
 imprimir()
 eliminarContacto("Sandra Caballero")
 imprimir()
